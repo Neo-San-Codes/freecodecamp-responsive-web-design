@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FC Barcelona Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">FC Barcelona Global Survey</h1>
+    <p id="description">Share your thoughts on the squad, season expectations, and matchday experience.</p>
+
+    <form id="survey-form" action="" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <label id="name-label" for="name">Culer Name</label>
+        <input 
+          id="name" 
+          type="text" 
+          placeholder="e.g. Desmond" 
+          size="20" 
+          required 
+        />
+
+        <label id="email-label" for="email">Email</label>
+        <input 
+          id="email" 
+          type="email" 
+          placeholder="e.g. name@example.com" 
+          size="20" 
+          required 
+        />
+
+        <label id="number-label" for="number">Age (optional)</label>
+        <input 
+          id="number" 
+          type="number" 
+          placeholder="e.g. 23" 
+          min="1" 
+          max="120" 
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Fan Opinions</legend>
+        
+        <label for="dropdown">Favorite Era:</label>
+        <select id="dropdown" name="favorite-era">
+          <option disabled selected value="">Select an era</option>
+          <option value="pep">Pep Guardiola Era</option>
+          <option value="msn">MSN Era</option>
+          <option value="flick">Hansi Flick Era</option>
+        </select>
+
+        <p>Greatest Barça Player of All Time:</p>
+        <input type="radio" id="messi" name="goat" value="messi" checked />
+        <label for="messi">Lionel Messi</label>
+
+        <input type="radio" id="ronaldinho" name="goat" value="ronaldinho" />
+        <label for="ronaldinho">Ronaldinho</label>
+
+        <input type="radio" id="cruyff" name="goat" value="cruyff" />
+        <label for="cruyff">Johan Cruyff</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Competitions & Matchday</legend>
+        <p>Which competitions are you most excited to watch this season?</p>
+
+        <input type="checkbox" id="laliga" name="competitions" value="laliga" />
+        <label for="laliga">La Liga</label>
+
+        <input type="checkbox" id="ucl" name="competitions" value="ucl" />
+        <label for="ucl">UEFA Champions League</label>
+
+        <input type="checkbox" id="copa" name="competitions" value="copa" />
+        <label for="copa">Copa del Rey</label>
+
+        <input type="checkbox" id="supercopa" name="competitions" value="supercopa" />
+        <label for="supercopa">Supercopa de España</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Fan Feedback</legend>
+        
+        <label for="comments">Match prediction or message for the squad:</label>
+        <textarea 
+          id="comments" 
+          name="comments" 
+          rows="4" 
+          placeholder="Share your expectations for the season..."
+        ></textarea>
+      </fieldset>
+
+      <button type="submit" id="submit">Submit Feedback</button>
+    </form>
+  </body>
+</html>
