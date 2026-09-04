@@ -1,0 +1,75 @@
+body{
+  background: #f4f4f4;
+}
+
+h1{
+  font-family: Tahoma, 'Segoe UI', sans-serif;
+  text-align: center;
+}
+.color-grid {
+  background: radial-gradient(at top left, rgba(0, 0, 0, 0.1), rgb(255, 255, 255));
+  width: 400px;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px 4px rgb(0, 0 , 0, 0.2)
+}
+
+.color-box {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 30px;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 2px rgb(0, 0 , 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px currentColor, 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.color-box::after {
+  content: attr(data-name);
+  color: #ffffff;
+  font-family: Tahoma, 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.color-box:hover::after {
+  opacity: 1;
+}
+
+.color1 {
+  background-color: #a855f7;
+  color: #a855f7;
+}
+
+.color2 {
+  background-color: rgb(6, 182, 212);
+  color: rgb(6, 182, 212);
+}
+
+.color3 {
+  background-color: crimson;
+  color: crimson;
+}
+
+.color4 {
+  background-color: hsl(84, 81%, 44%);
+  color: hsl(84, 81%, 44%);
+}
+
+.color5 {
+  background-color: rgba(245, 158, 11, 0.85);
+  color: rgb(245, 158, 11);
+}
